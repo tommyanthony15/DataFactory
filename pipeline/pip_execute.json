@@ -1,0 +1,72 @@
+{
+	"name": "pip_execute",
+	"properties": {
+		"activities": [
+			{
+				"name": "Execute CapaBronce",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pip_capabronce",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Execute CapaPlata",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Execute CapaBronce",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pip_capaplata",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Execute CapaOro",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Execute CapaPlata",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pip_capaoro",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2024-05-23T01:23:34Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

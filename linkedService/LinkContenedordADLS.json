@@ -1,0 +1,12 @@
+{
+	"name": "LinkContenedordADLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://tobregon.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEY5RjA3NzVBLUQxMDYtNEYwQy04Q0Q2LTUxNzU5NEQ0RkI0NV9iZjUzYmMxNy1lNmE1LTQ4ZGEtOTVjNC1jY2Q2NGE2OGQwYTIiDQp9"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "tobregonfactoriadatos",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "86febbf5-54e0-46b4-93fb-151681ec618a",
+		"tenantId": "3db4f30f-c896-482b-a249-22548553c724"
+	}
+}
